@@ -1,22 +1,51 @@
-const missionsContainer = document.getElementById("missions");
+const missions = document.querySelectorAll(".mission");
+const xpDisplay = document.getElementById("xp");
+const progressBar = document.getElementById("progress");
+const percentDisplay = document.getElementById("percent");
 
-missions.forEach((mission) => {
+let xp = 500;
+let completed = 0;
 
-    const card = document.createElement("div");
-    card.className = `mission ${mission.status}`;
+missions.forEach((mission, index) => {
 
-    card.innerHTML = `
-        <h2>${mission.title}</h2>
+    const button = mission.querySelector("button");
 
-        <p>${mission.description}</p>
+    button.addEventListener("click", () => {
 
-        <p><strong>XP:</strong> ${mission.xp}</p>
+        if (button.disabled) return;
 
-        <button ${mission.status === "locked" ? "disabled" : ""}>
-            ${mission.status === "available" ? "Start Mission" : "Locked"}
-        </button>
-    `;
+        // tambah XP
+        xp += 100;
+        xpDisplay.textContent = xp;
 
-    missionsContainer.appendChild(card);
+        // siap misi
+        mission.classList.add("completed");
+        button.textContent = "Completed";
+        button.disabled = true;
+
+        completed++;
+
+        // progress
+        const percent = Math.round((completed / missions.length) * 100);
+
+        progressBar.value = percent;
+        percentDisplay.textContent = percent + "%";
+
+        // unlock mission seterusnya
+        const nextMission = missions[index + 1];
+
+        if (nextMission) {
+
+            nextMission.classList.remove("locked");
+
+            const nextButton = nextMission.querySelector("button");
+
+            nextButton.disabled = false;
+
+            nextButton.textContent = "Start Mission";
+
+        }
+
+    });
 
 });
