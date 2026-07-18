@@ -87,3 +87,40 @@ button{
 button:hover{
     background:#16a34a;
 }
+/* ===== Dashboard ===== */
+
+.dashboard{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+    padding:20px;
+    background:rgba(255,255,255,.08);
+    border-radius:15px;
+    backdrop-filter:blur(8px);
+}
+
+.player h2{
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.player p{
+    margin:6px 0;
+    color:#ddd;
+}
+
+.progress-box{
+    width:45%;
+}
+
+progress{
+    width:100%;
+    height:20px;
+}
+
+#percent{
+    font-weight:bold;
+    color:#00ff88;
+}
