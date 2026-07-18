@@ -1,12 +1,35 @@
-const missions = document.querySelectorAll(".mission");
+const missionsContainer = document.getElementById("missions");
+
+missions.forEach((mission) => {
+
+    const card = document.createElement("div");
+
+    card.className = `mission ${mission.status}`;
+
+    card.innerHTML = `
+        <h2>${mission.title}</h2>
+
+        <p>${mission.description}</p>
+
+        <p><strong>XP:</strong> ${mission.xp}</p>
+
+        <button ${mission.status === "locked" ? "disabled" : ""}>
+            ${mission.status === "available" ? "Start Mission" : "Locked"}
+        </button>
+    `;
+
+    missionsContainer.appendChild(card);
+
+});
+
+const missionCards = document.querySelectorAll(".mission");
 const xpDisplay = document.getElementById("xp");
-const progressBar = document.getElementById("progress");
 const percentDisplay = document.getElementById("percent");
 
 let xp = 500;
 let completed = 0;
 
-missions.forEach((mission, index) => {
+missionCards.forEach((mission, index) => {
 
     const button = mission.querySelector("button");
 
@@ -14,27 +37,30 @@ missions.forEach((mission, index) => {
 
         if (button.disabled) return;
 
-        // tambah XP
         xp += 100;
         xpDisplay.textContent = xp;
 
-        // siap misi
         mission.classList.add("completed");
+
         button.textContent = "Completed";
+
         button.disabled = true;
 
         completed++;
 
-        // progress
-        const percent = Math.round((completed / missions.length) * 100);
+        const percent = Math.round((completed / missionCards.length) * 100);
 
-        progressBar.value = percent;
         percentDisplay.textContent = percent + "%";
 
-        // unlock mission seterusnya
-        const nextMission = missions[index + 1];
+        const progressFill = document.getElementById("progress-fill");
 
-        if (nextMission) {
+        if(progressFill){
+            progressFill.style.width = percent + "%";
+        }
+
+        const nextMission = missionCards[index + 1];
+
+        if(nextMission){
 
             nextMission.classList.remove("locked");
 
