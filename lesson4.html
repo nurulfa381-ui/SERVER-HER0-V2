@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mission 4 - Configure DNS Server</title>
+
+    <link rel="stylesheet" href="lesson4.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>🌐 MISSION 04</h1>
+
+        <h2>CONFIGURE DNS SERVER</h2>
+
+    </header>
+
+    <!-- STORY -->
+
+    <section class="story">
+
+        <h2>📖 Mission Briefing</h2>
+
+        <p>
+
+            Excellent work Agent!
+
+            <br><br>
+
+            Active Directory Domain Services has been installed successfully.
+
+            <br><br>
+
+            Your next mission is to configure the
+            <strong>Domain Name System (DNS)</strong>
+            so every computer in the network can locate the Domain Controller
+            using a domain name instead of an IP address.
+
+        </p>
+
+    </section>
+
+    <!-- OBJECTIVE -->
+
+    <section class="objective">
+
+        <h2>🎯 Mission Objective</h2>
+
+        <ul>
+
+            <li>Understand DNS Server</li>
+
+            <li>Open DNS Manager</li>
+
+            <li>Create Forward Lookup Zone</li>
+
+            <li>Verify DNS Records</li>
+
+            <li>Test Name Resolution</li>
+
+        </ul>
+
+    </section>
+
+    <!-- PROGRESS -->
+
+    <section class="progress-box">
+
+        <h2>📊 Mission Progress</h2>
+
+        <progress
+            id="missionProgress"
+            value="0"
+            max="100">
+        </progress>
+
+        <h3 id="progressText">0%</h3>
+
+    </section>
+
+    <!-- LEARNING -->
+
+    <section class="lesson">
+
+        <h2>📘 What is DNS?</h2>
+
+        <p>
+
+            Domain Name System (DNS) is a network service that translates
+            domain names into IP addresses. DNS allows users and computers
+            to locate servers quickly without remembering numeric IP addresses.
+
+        </p>
+
+    </section>
+
+    <!-- BENEFITS -->
+
+    <section class="lesson">
+
+        <h2>✅ Why DNS is Important?</h2>
+
+        <ul>
+
+            <li>Converts domain names into IP addresses.</li>
+
+            <li>Allows clients to find the Domain Controller.</li>
+
+            <li>Supports Active Directory services.</li>
+
+            <li>Improves network communication.</li>
+
+            <li>Essential for Windows Domain environments.</li>
+
+        </ul>
+
+    </section>
+
+    <!-- INSTALLATION -->
+
+    <section class="lesson">
+
+        <h2>⚙ Configuration Steps</h2>
+
+        <ol>
+
+            <li>Open <strong>Server Manager</strong>.</li>
+
+            <li>Select <strong>Tools → DNS</strong>.</li>
+
+            <li>Expand the Server Name.</li>
+
+            <li>Open <strong>Forward Lookup Zones</strong>.</li>
+
+            <li>Create or verify the DNS Zone.</li>
+
+            <li>Ensure Host (A) Records are available.</li>
+
+            <li>Save the configuration.</li>
+
+        </ol>
+
+    </section>
+
+    <!-- COMMAND -->
+
+    <section class="lesson">
+
+        <h2>💻 Verification Command</h2>
+
+        <p>
+
+            Open Command Prompt and run:
+
+        </p>
+
+        <div class="code-box">
+
+            nslookup serverhero.local
+
+        </div>
+
+        <p>
+
+            If the DNS configuration is correct, the server IP address
+            will be displayed.
+
+        </p>
+
+    </section>
+
+    <!-- TIPS -->
+
+    <section class="lesson">
+
+        <h2>💡 Mission Tips</h2>
+
+        <ul>
+
+            <li>DNS is automatically installed with AD DS in most cases.</li>
+
+            <li>Always verify the Forward Lookup Zone.</li>
+
+            <li>Check that the DNS service is running.</li>
+
+            <li>Use <strong>nslookup</strong> to test DNS resolution.</li>
+
+        </ul>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section class="quiz">
+
+        <h2>📝 Mini Quiz</h2>
+
+        <p>
+
+            What is the primary function of a DNS Server?
+
+        </p>
+
+        <button onclick="answer(true)">
+            Translate Domain Names into IP Addresses
+        </button>
+
+        <button onclick="answer(false)">
+            Install Windows Updates
+        </button>
+
+        <button onclick="answer(false)">
+            Manage Microsoft Office
+        </button>
+
+        <button onclick="answer(false)">
+            Format Hard Disk
+        </button>
+
+    </section>
+
+    <!-- RESULT -->
+
+    <section
+        id="result"
+        class="result">
+
+    </section>
+
+    <!-- BUTTON -->
+
+    <div class="buttons">
+
+        <button
+            id="completeBtn"
+            onclick="completeMission()"
+            disabled>
+
+            Complete Mission
+
+        </button>
+
+        <button
+            onclick="window.location.href='index.html'">
+
+            Back Dashboard
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="lesson4.js"></script>
+
+</body>
+
+</html>

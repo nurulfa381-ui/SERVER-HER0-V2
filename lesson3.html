@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mission 3 - Install Active Directory</title>
+
+    <link rel="stylesheet" href="lesson3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>🖥 MISSION 03</h1>
+
+        <h2>INSTALL ACTIVE DIRECTORY DOMAIN SERVICES</h2>
+
+    </header>
+
+    <!-- STORY -->
+
+    <section class="story">
+
+        <h2>📖 Mission Briefing</h2>
+
+        <p>
+
+            Congratulations Agent!
+
+            <br><br>
+
+            Windows Server 2019 has been installed successfully.
+
+            <br><br>
+
+            Your next mission is to install
+            <strong>Active Directory Domain Services (AD DS)</strong>
+            and prepare the server as the company's Domain Controller.
+
+        </p>
+
+    </section>
+
+    <!-- OBJECTIVE -->
+
+    <section class="objective">
+
+        <h2>🎯 Mission Objective</h2>
+
+        <ul>
+
+            <li>Install AD DS Role</li>
+
+            <li>Configure Forest</li>
+
+            <li>Create Domain</li>
+
+            <li>Promote Server to Domain Controller</li>
+
+            <li>Verify Installation</li>
+
+        </ul>
+
+    </section>
+
+    <!-- PROGRESS -->
+
+    <section class="progress-box">
+
+        <h2>📊 Mission Progress</h2>
+
+        <progress
+            id="missionProgress"
+            value="0"
+            max="100">
+        </progress>
+
+        <h3 id="progressText">0%</h3>
+
+    </section>
+
+    <!-- LEARNING -->
+
+    <section class="lesson">
+
+        <h2>📘 What is Active Directory?</h2>
+
+        <p>
+
+            Active Directory Domain Services (AD DS) is a Microsoft Server Role
+            used to manage users, computers, groups, printers and security
+            policies within a Windows Domain Network.
+
+        </p> 
+
+    </section>
+
+    <!-- INSTALLATION -->
+
+    <section class="lesson">
+
+        <h2>⚙ Installation Steps</h2>
+
+        <ol>
+
+            <li>Open Server Manager</li>
+
+            <li>Select Add Roles and Features</li>
+
+            <li>Select Active Directory Domain Services</li>
+
+            <li>Click Install</li>
+
+            <li>Restart Server if required</li>
+
+        </ol>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section class="quiz">
+
+        <h2>📝 Mini Quiz</h2>
+
+        <p>
+
+            What is the function of Active Directory Domain Services?
+
+        </p>
+
+        <button onclick="answer(true)">
+            Manage users and computers
+        </button>
+
+        <button onclick="answer(false)">
+            Install Microsoft Office
+        </button>
+
+        <button onclick="answer(false)">
+            Edit Video
+        </button>
+
+        <button onclick="answer(false)">
+            Browse Internet
+        </button>
+
+    </section>
+
+    <!-- RESULT -->
+
+    <section
+        id="result"
+        class="result">
+
+    </section>
+
+    <!-- BUTTON -->
+
+    <div class="buttons">
+
+        <button
+            id="completeBtn"
+            onclick="completeMission()"
+            disabled>
+
+            Complete Mission
+
+        </button>
+
+        <button
+            onclick="window.location.href='index.html'">
+
+            Back Dashboard
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="lesson3.js"></script>
+
+</body>
+
+</html> 

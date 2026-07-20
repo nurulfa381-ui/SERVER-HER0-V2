@@ -1,0 +1,379 @@
+/* ======================================
+   SERVER HERO V2
+   LESSON 4
+   CONFIGURE DNS SERVER
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#061a40,#0f4c81,#00b4d8);
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 20px;
+
+}
+
+header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+header h1{
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+    color:#ffffff;
+
+}
+
+header h2{
+
+    font-size:28px;
+
+    font-weight:500;
+
+    color:#caf0f8;
+
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.story,
+.objective,
+.progress-box,
+.lesson,
+.quiz,
+.result{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.story h2,
+.objective h2,
+.progress-box h2,
+.lesson h2,
+.quiz h2{
+
+    margin-bottom:15px;
+
+    color:#ffffff;
+
+}
+
+.story p,
+.lesson p{
+
+    line-height:1.8;
+
+    color:#e2e8f0;
+
+}
+
+.objective ul,
+.lesson ul,
+.lesson ol{
+
+    margin-left:25px;
+
+    line-height:2;
+
+    color:#f8fafc;
+
+}
+
+/* ============================= */
+/* CODE BOX */
+/* ============================= */
+
+.code-box{
+
+    margin:20px 0;
+
+    padding:18px;
+
+    background:#0f172a;
+
+    color:#38bdf8;
+
+    border-left:5px solid #00d4ff;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    font-family:Consolas,monospace;
+
+    overflow-x:auto;
+
+}
+
+/* ============================= */
+/* PROGRESS */
+/* ============================= */
+
+progress{
+
+    width:100%;
+
+    height:25px;
+
+    margin-top:15px;
+
+}
+
+progress::-webkit-progress-bar{
+
+    background:#334155;
+
+    border-radius:20px;
+
+}
+
+progress::-webkit-progress-value{
+
+    background:#00d4ff;
+
+    border-radius:20px;
+
+}
+
+#progressText{
+
+    margin-top:10px;
+
+    color:#00ffff;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+}
+
+/* ============================= */
+/* QUIZ */
+/* ============================= */
+
+.quiz button{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#0284c7;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.quiz button:hover{
+
+    background:#06b6d4;
+
+    transform:translateY(-3px);
+
+}
+
+.quiz button:disabled{
+
+    background:#64748b;
+
+    cursor:not-allowed;
+
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+.buttons button{
+
+    flex:1;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#00b4d8;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+
+    background:#0096c7;
+
+}
+
+.buttons button:disabled{
+
+    background:#64748b;
+
+    cursor:not-allowed;
+
+}
+
+/* ============================= */
+/* RESULT */
+/* ============================= */
+
+.result{
+
+    display:none;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.success{
+
+    display:block;
+
+    border:2px solid #22c55e;
+
+    color:#22c55e;
+
+}
+
+.fail{
+
+    display:block;
+
+    border:2px solid #ef4444;
+
+    color:#ef4444;
+
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:34px;
+
+}
+
+header h2{
+
+font-size:20px;
+
+}
+
+.story,
+.objective,
+.progress-box,
+.lesson,
+.quiz,
+.result{
+
+padding:20px;
+
+}
+
+.code-box{
+
+font-size:16px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons button{
+
+font-size:18px;
+
+}
+
+}

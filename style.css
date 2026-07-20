@@ -1,126 +1,2077 @@
+/* ==========================================================
+   SERVER HERO PREMIUM V2.1
+   style.css
+   PART 1
+========================================================== */
+
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-    color:#fff;
+
+    background:#071322;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
     min-height:100vh;
+
+    position:relative;
+
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.background-grid{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+}
+
+.background-glow{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    background:
+
+    radial-gradient(circle at top left,#0099ff55,transparent 40%),
+
+    radial-gradient(circle at bottom right,#00d08444,transparent 40%),
+
+    radial-gradient(circle at center,#6f42c133,transparent 55%);
+
+}
+
+
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+.dashboard{
+
+    width:95%;
+
+    max-width:1500px;
+
     margin:auto;
+
     padding:30px;
+
 }
 
-h1{
-    text-align:center;
-    font-size:48px;
-    margin-bottom:10px;
-}
 
-p{
-    text-align:center;
-    margin-bottom:30px;
-    color:#dbeafe;
-}
+/* ==========================================================
+   HEADER
+========================================================== */
 
-#missions{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+.top-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
     gap:20px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.35);
+
+    margin-bottom:30px;
+
 }
 
-.mission-card{
-    background:rgba(255,255,255,.08);
-    border-radius:18px;
-    padding:20px;
-    border:1px solid rgba(255,255,255,.2);
-    transition:.3s;
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
 }
 
-.mission-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
+.logo-icon{
 
-.mission-card h2{
-    font-size:22px;
-    margin-bottom:10px;
-}
+    width:85px;
 
-.mission-card p{
-    text-align:left;
-    margin:10px 0;
-}
+    height:85px;
 
-.xp{
-    display:inline-block;
-    background:#f59e0b;
-    color:#000;
-    padding:6px 12px;
     border-radius:20px;
-    font-weight:bold;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #008cff,
+
+    #00d4ff
+
+    );
+
+    box-shadow:
+
+    0 0 30px rgba(0,140,255,.45);
+
 }
 
-.locked{
-    opacity:.5;
+.logo-area h1{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
 }
+
+.logo-area p{
+
+    margin-top:6px;
+
+    color:#c8d4e7;
+
+    font-size:.95rem;
+
+}
+
+
+/* ==========================================================
+   PLAYER PROFILE
+========================================================== */
+
+.player-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.avatar{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#0f6efd;
+
+    font-size:34px;
+
+    box-shadow:
+
+    0 0 25px rgba(15,110,253,.45);
+
+}
+
+.player-profile h2{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+.player-profile p{
+
+    margin-top:5px;
+
+    color:#8fd3ff;
+
+    font-size:.95rem;
+
+}
+
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.panel-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.panel-header h2{
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+}
+
+.panel-header i{
+
+    color:#ffc107;
+
+    font-size:1.3rem;
+
+}
+
+
+/* ==========================================================
+   DEFAULT SECTION
+========================================================== */
+
+section{
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
 
 button{
-    width:100%;
-    margin-top:15px;
-    padding:12px;
+
     border:none;
-    border-radius:10px;
-    background:#22c55e;
-    color:white;
-    font-size:16px;
+
+    outline:none;
+
     cursor:pointer;
+
+    transition:.30s;
+
+    border-radius:12px;
+
+    font-weight:600;
+
 }
 
 button:hover{
-    background:#16a34a;
-}
-/* ===== Dashboard ===== */
 
-.dashboard{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081420;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0f6efd;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3a8dff;
+
+} 
+
+/* ==========================================================
+   STYLE.CSS
+   PART 2
+   PLAYER PANEL • PROGRESS • QUICK STATS
+========================================================== */
+
+
+/* ==========================================================
+   PLAYER PANEL
+========================================================== */
+
+.player-panel{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
     margin-bottom:30px;
-    padding:20px;
-    background:rgba(255,255,255,.08);
-    border-radius:15px;
-    backdrop-filter:blur(8px);
+
 }
 
-.player h2{
+.stat-card{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,140,255,.25);
+
+}
+
+.stat-card i{
+
+    font-size:2.3rem;
+
+    color:#ffd43b;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+    font-size:1rem;
+
+    color:#d6dce8;
+
     margin-bottom:10px;
-    color:#fff;
+
+    font-weight:500;
+
 }
 
-.player p{
-    margin:6px 0;
-    color:#ddd;
+.stat-card h2{
+
+    font-size:2rem;
+
+    color:#ffffff;
+
+    font-weight:700;
+
 }
 
-.progress-box{
-    width:45%;
+
+/* ==========================================================
+   PROGRESS
+========================================================== */
+
+.progress-section{
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
 }
 
-progress{
-    width:100%;
-    height:20px;
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.progress-header h2{
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
 }
 
 #percent{
-    font-weight:bold;
-    color:#00ff88;
+
+    color:#00d084;
+
+    font-weight:700;
+
 }
+
+progress{
+
+    width:100%;
+
+    height:22px;
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+progress::-webkit-progress-bar{
+
+    background:#16273a;
+
+    border-radius:20px;
+
+}
+
+progress::-webkit-progress-value{
+
+    background:linear-gradient(
+
+        90deg,
+
+        #00c6ff,
+
+        #0072ff
+
+    );
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================================
+   QUICK STATS
+========================================================== */
+
+.quick-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.quick-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.quick-card:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.quick-card i{
+
+    font-size:2rem;
+
+    color:#4dabff;
+
+    margin-bottom:12px;
+
+}
+
+.quick-card h3{
+
+    font-size:1rem;
+
+    margin-bottom:10px;
+
+    color:#dbe3ef;
+
+}
+
+.quick-card p{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+
+/* ==========================================================
+   DAILY MISSION
+========================================================== */
+
+.daily-box{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0f6efd,
+
+        #0099ff
+
+    );
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 18px 40px rgba(0,80,255,.25);
+
+}
+
+.daily-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+.daily-title i{
+
+    font-size:1.5rem;
+
+    color:#ffd43b;
+
+}
+
+.daily-title h2{
+
+    font-size:1.5rem;
+
+}
+
+#dailyMission{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   MISSION TITLE
+========================================================== */
+
+.mission-title{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    margin-bottom:30px;
+
+}
+
+.mission-title h2{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.mission-title p{
+
+    color:#c8d4e7;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+} 
+
+/* ==========================================================
+   STYLE.CSS
+   PART 3
+   MISSION GRID • MISSION CARD • BUTTON
+========================================================== */
+
+
+/* ==========================================================
+   MISSION GRID
+========================================================== */
+
+.mission-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+    margin-top:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================================
+   MISSION CARD
+========================================================== */
+
+.mission-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    backdrop-filter:blur(16px);
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.mission-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,140,255,.28);
+
+}
+
+
+/* ==========================================================
+   TOP GLOW
+========================================================== */
+
+.mission-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #00d4ff,
+
+        #0f6efd,
+
+        #6f42c1
+
+    );
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.mission-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+}
+
+.mission-header h2{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+
+/* ==========================================================
+   XP BADGE
+========================================================== */
+
+.badge{
+
+    background:#0f6efd;
+
+    color:#ffffff;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    box-shadow:0 0 15px rgba(15,110,253,.35);
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.mission-card p{
+
+    color:#d8e2ef;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.mission-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.mission-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0f6efd,
+
+        #00b4ff
+
+    );
+
+    transition:.30s;
+
+}
+
+.mission-card button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(0,140,255,.35);
+
+}
+
+
+/* ==========================================================
+   LOCKED
+========================================================== */
+
+.mission-card.locked{
+
+    opacity:.55;
+
+    filter:grayscale(1);
+
+}
+
+.mission-card.locked::after{
+
+    content:"🔒 LOCKED";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#dc3545;
+
+    color:#ffffff;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.mission-card.locked button{
+
+    background:#5c6675;
+
+    cursor:not-allowed;
+
+}
+
+.mission-card.locked button:hover{
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+/* ==========================================================
+   COMPLETED
+========================================================== */
+
+.mission-card.completed{
+
+    border:2px solid #00d084;
+
+}
+
+.mission-card.completed::after{
+
+    content:"✔ COMPLETED";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#00b96b;
+
+    color:#ffffff;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.mission-card.completed button{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00b96b,
+
+        #00d084
+
+    );
+
+}
+
+
+/* ==========================================================
+   SMALL ANIMATION
+========================================================== */
+
+@keyframes cardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.mission-card:hover .badge{
+
+    animation:cardFloat .8s infinite;
+
+}
+
+/* ==========================================================
+   STYLE.CSS
+   PART 4
+   ACHIEVEMENT • SHOP • MENU • FOOTER
+========================================================== */
+
+
+/* ==========================================================
+   ACHIEVEMENT PANEL
+========================================================== */
+
+.achievement-panel{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.achievement-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+
+}
+
+.achievement-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:24px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ffd43b;
+
+    box-shadow:0 18px 35px rgba(255,212,59,.20);
+
+}
+
+.achievement-icon{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.achievement-card h3{
+
+    font-size:1.15rem;
+
+    margin-bottom:10px;
+
+}
+
+.achievement-card p{
+
+    color:#d4dde9;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================
+   SHOP
+========================================================== */
+
+.shop-section{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.shop-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:22px;
+
+}
+
+.shop-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.shop-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,140,255,.20);
+
+}
+
+.shop-card h3{
+
+    font-size:1.2rem;
+
+    margin-bottom:15px;
+
+}
+
+.shop-card p{
+
+    color:#ffd43b;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.shop-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #ff9800,
+
+        #ffb300
+
+    );
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.shop-card button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(255,179,0,.30);
+
+}
+
+
+/* ==========================================================
+   MENU PANEL
+========================================================== */
+
+.menu-panel{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:40px;
+
+}
+
+.menu-panel button{
+
+    min-width:220px;
+
+    padding:16px 24px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0f6efd,
+
+        #00b4ff
+
+    );
+
+    color:#ffffff;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.30s;
+
+}
+
+.menu-panel button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,140,255,.30);
+
+}
+
+.menu-panel i{
+
+    font-size:1rem;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p:first-child{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+}
+
+footer p:last-child{
+
+    color:#b8c6d8;
+
+    font-size:.95rem;
+
+}
+
+
+/* ==========================================================
+   FADE ANIMATION
+========================================================== */
+
+@keyframes fadeInUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.achievement-panel,
+.shop-section,
+.menu-panel,
+footer{
+
+    animation:fadeInUp .8s ease;
+
+}
+
+/* ==========================================================
+   STYLE.CSS
+   PART 5
+   POPUP • TOAST • PARTICLE • ANIMATION
+========================================================== */
+
+
+/* ==========================================================
+   REWARD POPUP
+========================================================== */
+
+.reward-popup{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(.7);
+
+    width:min(420px,90vw);
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:rgba(12,22,38,.96);
+
+    border:2px solid #00d084;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.reward-popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+.reward-popup h2{
+
+    color:#00d084;
+
+    margin-bottom:20px;
+
+    font-size:1.8rem;
+
+}
+
+.reward-popup p{
+
+    margin:10px 0;
+
+    font-size:1.15rem;
+
+}
+
+
+/* ==========================================================
+   ACHIEVEMENT POPUP
+========================================================== */
+
+.achievement-popup{
+
+    position:fixed;
+
+    top:40px;
+
+    right:40px;
+
+    width:340px;
+
+    max-width:90vw;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#101f35;
+
+    border-left:6px solid gold;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transform:translateX(120%);
+
+    transition:.35s;
+
+    z-index:9998;
+
+}
+
+.achievement-popup.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.achievement-popup h2{
+
+    color:gold;
+
+    margin-bottom:12px;
+
+}
+
+.achievement-popup h3{
+
+    margin-bottom:10px;
+
+}
+
+.achievement-popup p{
+
+    color:#d8e2ef;
+
+}
+
+
+/* ==========================================================
+   DAILY BONUS
+========================================================== */
+
+.daily-popup{
+
+    position:fixed;
+
+    bottom:35px;
+
+    left:35px;
+
+    width:320px;
+
+    max-width:90vw;
+
+    padding:24px;
+
+    border-radius:18px;
+
+    background:#0f6efd;
+
+    color:#fff;
+
+    box-shadow:0 15px 35px rgba(15,110,253,.35);
+
+    transform:translateY(150%);
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:9997;
+
+}
+
+.daily-popup.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+.daily-popup h2{
+
+    margin-bottom:12px;
+
+}
+
+.daily-popup p{
+
+    margin:8px 0;
+
+}
+
+
+/* ==========================================================
+   TOAST
+========================================================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(-100px);
+
+    padding:16px 30px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:99999;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+.toast.show{
+
+    transform:translateX(-50%) translateY(0);
+
+    opacity:1;
+
+}
+
+.toast.success{
+
+    background:#00b96b;
+
+}
+
+.toast.error{
+
+    background:#dc3545;
+
+}
+
+.toast.info{
+
+    background:#0f6efd;
+
+}
+
+
+/* ==========================================================
+   LEVEL UP
+========================================================== */
+
+.level-up{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999999;
+
+}
+
+.level-up.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.level-up h1{
+
+    font-size:3rem;
+
+    color:#ffd43b;
+
+    margin-bottom:20px;
+
+    animation:pulse 1s infinite;
+
+}
+
+.level-up h2{
+
+    font-size:2rem;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   PARTICLE
+========================================================== */
+
+.particle{
+
+    position:fixed;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00d4ff;
+
+    pointer-events:none;
+
+    z-index:9990;
+
+    animation:particleFloat linear forwards;
+
+}
+
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes particleFloat{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================================
+   SERVER HERO PREMIUM V2.1
+   STYLE.CSS
+   PART 6 (FINAL)
+   RESPONSIVE • MOBILE • TABLET • iPAD
+========================================================== */
+
+
+/* ==========================================================
+   LARGE TABLET
+========================================================== */
+
+@media (max-width:1200px){
+
+    .player-panel{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .quick-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .mission-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .dashboard{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    .top-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .logo-area{
+
+        flex-direction:column;
+
+    }
+
+    .player-profile{
+
+        flex-direction:column;
+
+    }
+
+    .achievement-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .shop-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    .player-panel{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quick-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .shop-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .menu-panel{
+
+        flex-direction:column;
+
+    }
+
+    .menu-panel button{
+
+        width:100%;
+
+    }
+
+    .logo-area h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .mission-title h2{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+    .dashboard{
+
+        padding:15px;
+
+    }
+
+    .top-header{
+
+        padding:20px;
+
+    }
+
+    .logo-icon{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:30px;
+
+    }
+
+    .avatar{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .stat-card{
+
+        padding:20px;
+
+    }
+
+    .quick-card{
+
+        padding:18px;
+
+    }
+
+    .mission-card{
+
+        padding:22px;
+
+    }
+
+    .reward-popup,
+
+    .achievement-popup,
+
+    .daily-popup{
+
+        width:90%;
+
+        left:50%;
+
+        right:auto;
+
+        transform:translateX(-50%);
+
+    }
+
+    .achievement-popup.show{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMOOTH ANIMATION
+========================================================== */
+
+.stat-card,
+.quick-card,
+.mission-card,
+.achievement-card,
+.shop-card,
+.menu-panel button{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+
+}
+
+
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.stat-card,
+.quick-card,
+.mission-card,
+.achievement-card,
+.shop-card,
+.progress-section,
+.daily-box,
+.achievement-panel,
+.shop-section{
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+}
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:#0f6efd;
+
+    color:#ffffff;
+
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+button:focus{
+
+    outline:2px solid #00d4ff;
+
+    outline-offset:3px;
+
+}
+
+
+/* ==========================================================
+   END OF FILE
+========================================================== */

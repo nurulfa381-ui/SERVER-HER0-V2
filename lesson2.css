@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0b1f52,#1d4ed8);
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.lesson{
+
+    width:900px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+
+}
+
+.lesson h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.lesson h2{
+
+    text-align:center;
+
+    color:#4ade80;
+
+    margin-bottom:30px;
+
+}
+
+.video,
+.notes{
+
+    background:rgba(255,255,255,.08);
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+}
+
+.notes ul{
+
+    margin-left:20px;
+
+    line-height:2;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#16a34a;
+
+} 
+
+<h3>📹 Tutorial Video</h3>
+
+<a href="https://www.youtube.com/watch?v=VXxH4n684HE"
+   target="_blank"
+   class="video-btn">
+   ▶ Watch Windows Server 2019 Tutorial
+</a>
+
+<h3>📹 Tutorial Video</h3>
+
+<a href="https://www.youtube.com/watch?v=VXxH4n684HE"
+   target="_blank"
+   class="video-btn">
+   ▶ Watch Windows Server 2019 Tutorial
+</a>
+
+.video-btn{
+    display:inline-block;
+    margin:20px 0;
+    padding:18px 35px;
+    background:#ff3b30;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.video-btn:hover{
+    background:#d92c20;
+    transform:scale(1.05);
+}
